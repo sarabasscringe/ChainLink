@@ -33,5 +33,8 @@
 
 'brainfuck_l':'https://raw.githubusercontent.com/simon-esp/ChainLink/refs/heads/main/CLSS/Programs/brainfuck.clss'
 'brainfuck_b':1440
-'brainfuck_n':'brainfuck.clss
+'brainfuck_n':'brainfuck.clss'
+
+'calculator_l':'https://raw.githubusercontent.com/simon-esp/ChainLink/refs/heads/main/CLSS/Programs/calculator.clss'
+'calculator_b':508
 }
