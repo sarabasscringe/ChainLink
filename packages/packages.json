@@ -29,12 +29,21 @@
 
 'climb_l':'https://raw.githubusercontent.com/simon-esp/ChainLink/refs/heads/main/interface/climb.py',
 'climb_b':9914,
-'climb_n':'climb.py'
+'climb_n':'climb.py',
 
-'brainfuck_l':'https://raw.githubusercontent.com/simon-esp/ChainLink/refs/heads/main/CLSS/Programs/brainfuck.clss'
-'brainfuck_b':1440
-'brainfuck_n':'brainfuck.clss'
+'brainfuck_l':'https://raw.githubusercontent.com/simon-esp/ChainLink/refs/heads/main/CLSS/Programs/brainfuck.clss',
+'brainfuck_b':1440,
+'brainfuck_n':'brainfuck.clss',
 
-'calculator_l':'https://raw.githubusercontent.com/simon-esp/ChainLink/refs/heads/main/CLSS/Programs/calculator.clss'
-'calculator_b':508
+'calculator_l':'https://raw.githubusercontent.com/simon-esp/ChainLink/refs/heads/main/CLSS/Programs/calculator.clss',
+'calculator_b':508,
+'calculator_n':'calculator.clss',
+
+'fibseq_l':'',
+'fibseq_b':0,
+'fibseq_n':'fibonacci sequence.clss',
+
+'pyramid_l':'',
+'pyramid_b':0,
+'pyramid_n':'pyramid.clss'
 }
