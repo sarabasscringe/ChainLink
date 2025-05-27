@@ -32,6 +32,6 @@
 'climb_n':'climb.py'
 
 'brainfuck_l':'https://raw.githubusercontent.com/simon-esp/ChainLink/refs/heads/main/CLSS/Programs/brainfuck.clss'
-'brainfuck_b':0
+'brainfuck_b':1440
 'brainfuck_n':'brainfuck.clss
 }
