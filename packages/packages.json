@@ -39,8 +39,8 @@
 'calculator_b':508,
 'calculator_n':'calculator.clss',
 
-'fibseq_l':'',
-'fibseq_b':0,
+'fibseq_l':'https://raw.githubusercontent.com/simon-esp/ChainLink/refs/heads/main/CLSS/Programs/fibonacci%20sequence.clss',
+'fibseq_b':132,
 'fibseq_n':'fibonacci sequence.clss',
 
 'pyramid_l':'',
