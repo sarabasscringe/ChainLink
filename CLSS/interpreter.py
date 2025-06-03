@@ -2,6 +2,36 @@ import time
 import os
 import kernel
 import keyboard
+from tkinter import simpledialog
+import queue
+import threading
+
+input_queue = queue.Queue()
+input_event = threading.Event()
+root_window = None  # You must call set_root_window()
+
+def set_root_window(root):
+    global root_window
+    root_window = root
+
+def ask_input_main_thread(prompt):
+    global input_queue, input_event
+    answer = simpledialog.askstring("Input", prompt, parent=root_window)
+    input_queue.put(answer)
+    input_event.set()  # Notify interpreter thread
+
+def interpreter_input(prompt):
+    if root_window is None:
+        raise RuntimeError("root_window is not set.")
+
+    input_event.clear()  # Reset the event
+    root_window.after(50, ask_input_main_thread, prompt)
+
+    input_event.wait()  # Wait for user input to complete
+    answer = input_queue.get()
+
+    return answer if answer is None else answer
+
 
 def parse(p):
     s = ''.join(p.splitlines())
@@ -138,8 +168,7 @@ def eval(e):
         elif op == '*':
             f = int(f) * int(operand)
         elif op == '/':
-            f = int(f)  / int(operand)
-
+            f = int(f) / int(operand)
         elif op == '%':
             f = int(f) % int(operand)
         elif op == '++':
@@ -203,7 +232,11 @@ def interpret(s, args=None):
                 else:
                     print(f"Function {keyword_gone.split(' ')[0]} not found")
             case 'input':
-                vars[keyword_gone.split(':')[0]] = input(eval(':'.join(keyword_gone.split(':')[1:])))
+                prompt_text = eval(':'.join(keyword_gone.split(':')[1:]))
+                user_input = interpreter_input(prompt_text)
+                var_name = keyword_gone.split(':')[0].strip()
+                vars[var_name] = user_input
+
             case 'brake':
                 brk = int(eval(keyword_gone))
             case 'passat':
@@ -303,4 +336,4 @@ def clss(dir):
     print(f"Finished in {elapsed_time_ms:.2f} ms")
 
 if __name__ == '__main__':
-    clss('/home/simonesp/Documents/python/chainlink/test.clss')
+    clss('/home/simon/vscode/test.clss')
