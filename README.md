@@ -1,4 +1,4 @@
-# Chainlink <br>
+# Chainlink (THIS PROJECT IS NO LONGER BEING WORKED ON) <br>
 Chainlink is supposed to be an operating system (its quite far off)<br>
 It has a custom high level language designed to interact with the chainring<br>
 (Chainring is the front gear on a mountain bike, in this context it is the terminal / shell)<br>
